@@ -76,4 +76,8 @@ A number 000-999 is the next value but valid values are usually 0-100 as that is
 The pot on A0 is used to allow for finer adjustments. It reduces the servo value. That if A0 is set to 100% of 5V then it will send, for example, 50% if 050 is sent.  Servos are controlled by a pulse value so the servo is set to move 100% of its movement. The adjustment is used to reduce this to the required movement.  Currently only on pot is used.
 
 
+Serial_Echo_Mega.ino
+
+Robot control code. Version 1.0 without any bells or whistles. 
+
 
