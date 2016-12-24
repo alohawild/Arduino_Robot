@@ -80,4 +80,8 @@ Serial_Echo_Mega.ino
 
 Robot control code. Version 1.0 without any bells or whistles. 
 
+Serial_Echo_Mega.ino
+
+Test code to echo serial. Good test for motor control.
+
 
