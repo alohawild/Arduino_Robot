@@ -84,4 +84,6 @@ Serial_Echo_Mega.ino
 
 Test code to echo serial. Good test for motor control.
 
+Servo_I2C.ino
 
+Version of LadyAda's servo control test program. Includes LCD from Sparkfun.
