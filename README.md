@@ -7,30 +7,44 @@ This document describes the initial version of a robot design. This initial vers
 Hardware
 
 Arduino Mega 2560 or suitable matching open hardware board (“Mega”).
+
 •	The Mega has the extra serial ports that can be referenced directly in the sketches as “Seril1” for example. This avoids “soft serial” and other issues as the ports are directly available.
+
 •	Power on board is enough to run extra boards to be connected.
 
 Seeed XBee Aruino Shield
 •	This shield allows an XBee to be powered by the Mega 2560. The shield just goes on top.
+
 •	The Seeed shield, unlike the Sparkfun shields, has a jumper to set the pins to use for the XBee. In our case we jump the jumpers via a wire to a Serial2 pins. This avoids using Serial which is used to communicate to the Mega
+
 •	XBee programmed to talk to another XBee and plugged into shield.
 
 Adafruit 16 Servo controllers
+
 •	This controller uses its own power source to power a number of servos. The version 1.0 robot is designed for no more than 16 servos numbered in hex from 0-F.  
+
 •	The connection is done by I2C connection via the A4 and A5. 
+
 •	A 4 AA battery is plugged into power feeds (listed below).
 
 Sparkfun Serial Motor controller
+
 •	This controller is able to control two motors using independent power and isolates the motor noise from the Mega.
+
 •	A 9V battery is plugged into power feeds (listed below).
+
 •	Serial1 is used to talk to the controller.
 
 Sparkfun Serial LCD
+
 •	Softserial is used; this is an output only device and this can be run simply by a simulated serial port and save on hardware serial. D3 and D2 are used to connect. 
+
 •	Powered by Mega.
 
 4 AA Battery holder
+
 1 9V with JST connector added
+
 1 10K Pot.
 
 Connection Summary
