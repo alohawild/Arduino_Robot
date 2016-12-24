@@ -13,6 +13,7 @@ Arduino Mega 2560 or suitable matching open hardware board (“Mega”).
 •	Power on board is enough to run extra boards to be connected.
 
 Seeed XBee Aruino Shield
+
 •	This shield allows an XBee to be powered by the Mega 2560. The shield just goes on top.
 
 •	The Seeed shield, unlike the Sparkfun shields, has a jumper to set the pins to use for the XBee. In our case we jump the jumpers via a wire to a Serial2 pins. This avoids using Serial which is used to communicate to the Mega
@@ -72,7 +73,7 @@ The next character is a number in hex 0-F (capitals only). This is the motor num
 
 A number 000-999 is the next value but valid values are usually 0-100 as that is the speed control for the motor. The servo value can be above 100% to turn it even more. 
 
-The pot on A0 is used to allow for finer adjustments. It reduces the servo value. That is if set to 100% of 5V then it will send, for example, 50% if 050 is sent.  Servos are controlled by a pulse value so the servo is set to move 100% of its movement. The adjustment is used to reduce this to the required movement.  Currently only on pot is used.
+The pot on A0 is used to allow for finer adjustments. It reduces the servo value. That if A0 is set to 100% of 5V then it will send, for example, 50% if 050 is sent.  Servos are controlled by a pulse value so the servo is set to move 100% of its movement. The adjustment is used to reduce this to the required movement.  Currently only on pot is used.
 
 
 
