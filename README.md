@@ -50,16 +50,28 @@ Sparkfun Serial LCD
 Connection Summary
 
 Mega has Seeed XBee shield plugged in the normal way.
+
 All jumpers are pulled on the Seeed XBee shield and jumper wires connect XBee to Serial2 (reversing Tx and Rx).
+
 XBee is fully powered by Seeed shield.
+
 One 10K Pot connected to Mega 5V, ground, and A0 to allow reading the value of the voltage in A0. Breadboard can be used to share 5V and ground.
+
 Sparkfun Serial LCD one wire to D3. Powered by 5V and ground of Mega. D3 used to send information. D2 ignored.
-Adafruit Servo Controller is an I2C device and is connected to A4 and A5. As we are using only one servo we have not added a cap to the controller.
+
+Adafruit Servo Controller is an I2C device and is connected to A4 and A5. As we are using only one servo we have not added a cap to the 
+controller.
+
 Command structure
+
 Commands start with AT. Examples are ATR1100 for full reverse on motor 1.
+
 R, F, or S follow being R-Reverse Motor, F-Forward Motor, and S-Servo.
+
 The next character is a number in hex 0-F (capitals only). This is the motor number (0-7 for motor 1, 8-F for motor 2) or the servo number 0-15 in hex.
+
 A number 000-999 is the next value but valid values are usually 0-100 as that is the speed control for the motor. The servo value can be above 100% to turn it even more. 
+
 The pot on A0 is used to allow for finer adjustments. It reduces the servo value. That is if set to 100% of 5V then it will send, for example, 50% if 050 is sent.  Servos are controlled by a pulse value so the servo is set to move 100% of its movement. The adjustment is used to reduce this to the required movement.  Currently only on pot is used.
 
 
